@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact - Andres Sanchez</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.png" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <a class="logo" href="index.html"> Portfolio </a>
+        <ul class="nav-links">
+          <li class="nav-link active"><a href="index.html">Home</a></li>
+          <li class="nav-link"><a href="about.html">About</a></li>
+          <li class="nav-link"><a href="projects.html">Projects</a></li>
+          <li class="nav-link"><a href="skills.html">Skills</a></li>
+          <li class="nav-link"><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-header">
+        <h1 class="page-title">Contact Me</h1>
+        <p class="page-subtitle">Little description</p>
+      </section>
+
+      <section class="contact-section">
+        <div class="contact-container">
+          <div class="contact-form-wrapper">
+            <h2>Send a Message</h2>
+            <p>fill the form and i will respond you asap</p>
+            <form
+              class="contact-form"
+              action="https://formspree.io/f/xjknlwjv"
+              method="POST"
+            >
+              <input
+                type="hidden"
+                name="_subject"
+                value="New message from Portfolio"
+              />
+
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+              </div>
+              <button type="submit" class="btn-submit">Send Message</button>
+            </form>
+          </div>
+
+          <div class="contact-info-wrapper">
+            <h2>Send a Message</h2>
+            <p>fill the form and i will respond you asap</p>
+            <div class="contact-links">
+              <a class="contact-link" href="mailto:ancosan2003@gmail.com">
+                <div class="contact-link-item">ancosan2003@gmail.com</div>
+              </a>
+
+              <a
+                target="_blank"
+                class="contact-link"
+                href="https://github.com/anxo2077"
+              >
+                <div class="contact-link-item">Github</div>
+              </a>
+              <a
+                target="_blank"
+                class="contact-link"
+                href="https://www.linkedin.com/in/andres-felipe-sanchez-ardila-1b5a3b399/"
+              >
+                <div class="contact-link-item">Linkedin</div>
+              </a>
+              <a
+                target="_blank"
+                class="contact-link"
+                href="https://discordapp.com/users/722487336352612392"
+              >
+                <div class="contact-link-item">Discord</div>
+              </a>
+            </div>
+            <div class="location-box">
+              <h3>Location</h3>
+              <p>Calwell, Idaho</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <section class="footer-content">
+        <p class="footer-copy">
+          &copy;2025 Andres Sanchez. All rights reserved.
+        </p>
+        <div class="social-links">
+          <a
+            href="https://github.com/anxo2077"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              class="footer-icon"
+              src="/assets/img/github-icon.png"
+              alt="GitHub"
+            />
+            GitHub</a
+          >
+          <a
+            href="https://www.linkedin.com/in/andres-felipe-sanchez-ardila-1b5a3b399/"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><img
+              class="footer-icon"
+              src="/assets/img/linkedin-icon.png"
+              alt="LinkedIn"
+            />
+            LinkedIn</a
+          >
+        </div>
+      </section>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
