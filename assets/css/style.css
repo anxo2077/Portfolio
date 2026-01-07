@@ -446,13 +446,20 @@ main {
   margin-bottom: 1.5rem;
 }
 
-.contact-link-item {
+.contact-link {
   display: flex;
   align-items: center;
+  gap: 0.8rem;
+}
+
+.contact-link-item {
+  display: flex;
+  align-items: right;
   padding: 0.5rem;
   border: 2px solid var(--border-color);
   border-radius: 8px;
   font-size: 1.1rem;
+  width: 100%;
 }
 
 .location-box {
@@ -495,6 +502,12 @@ main {
   font-size: 1.3rem;
   color: #666;
   margin-bottom: 1.5rem;
+}
+
+.contact-icon {
+  width: 60px;
+  height: 60px;
+  margin-right: -0.5rem;
 }
 
 /* Footer */
