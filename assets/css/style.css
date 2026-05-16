@@ -56,6 +56,8 @@ button {
 /* Header / Navbar */
 .navbar {
   display: flex;
+  flex-direction: column;
+  gap: 1rem;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
@@ -68,9 +70,11 @@ button {
 
 .nav-links {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 0.5rem;
   list-style: none;
-  font-size: 1.3rem;
+  font-size: 1rem;
 }
 
 .nav-link a {
@@ -127,12 +131,12 @@ main {
 }
 
 .hero-title {
-  font-size: 3rem;
+  font-size: 2.5rem;
   margin-bottom: 0.5rem;
 }
 
 .hero-subtitle {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   margin-bottom: 1rem;
   letter-spacing: 2px;
 }
@@ -168,7 +172,9 @@ main {
   border-radius: 8px;
   font-size: 1.2rem;
   cursor: pointer;
-  transition: background-color 0.2s, color 0.2s;
+  transition:
+    background-color 0.2s,
+    color 0.2s;
 }
 
 .btn-primary {
@@ -214,10 +220,10 @@ main {
 
 .about-cards {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   gap: 1.5rem;
   padding-bottom: 1.5rem;
-  flex-wrap: wrap;
 }
 
 .about-card {
@@ -263,7 +269,7 @@ main {
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr;
   gap: 1.5rem;
 }
 
@@ -323,7 +329,7 @@ main {
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
   gap: 1.5rem;
 }
 
@@ -381,7 +387,7 @@ main {
 
 .contact-container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 2rem;
 }
 
@@ -548,42 +554,194 @@ main {
   height: 30px;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
+.section-heading {
+  font-size: 1.6rem;
+  text-align: center;
+  margin: 1.5rem 0 1rem;
+}
+
+.education-section {
+  max-width: 900px;
+  margin: 0 auto 2rem;
+}
+
+.education-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.2rem;
+  border: 2px solid var(--border-color);
+  border-radius: 15px;
+  padding: 1.5rem;
+}
+
+.education-card-icon {
+  width: 50px;
+  height: 50px;
+  border: 2px solid var(--border-color);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(45deg);
+  flex-shrink: 0;
+}
+
+.education-card-icon span {
+  transform: rotate(-45deg);
+  font-size: 1.5rem;
+}
+
+.education-card-body h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.2rem;
+}
+
+.education-program {
+  font-size: 1.2rem;
+  margin-bottom: 0.2rem;
+}
+
+.education-status {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+.certifications-section {
+  max-width: 900px;
+  margin: 2rem auto 0;
+}
+
+.cert-coming-soon {
+  border: 2px dashed var(--border-color);
+  border-radius: 15px;
+  padding: 2rem;
+  text-align: center;
+  background-color: var(--light-gray);
+}
+
+.cert-icon {
+  width: 50px;
+  height: 50px;
+  border: 2px solid var(--border-color);
+  border-radius: 10px;
+  margin: 0 auto 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(45deg);
+}
+
+.cert-icon span {
+  transform: rotate(-45deg);
+  font-size: 1.5rem;
+}
+
+.cert-coming-soon h3 {
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.cert-coming-soon p {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+.project-card.private {
+  border-style: dashed;
+}
+
+.private-badge {
+  display: inline-block;
+  margin-left: 0.4rem;
+  padding: 0.1rem 0.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  font-size: 0.9rem;
+  vertical-align: middle;
+}
+
+.private-note {
+  font-size: 1rem;
+  color: #666;
+  font-style: italic;
+}
+
+.form-group input.invalid,
+.form-group textarea.invalid {
+  border-color: #c0392b;
+}
+
+.form-error {
+  display: block;
+  min-height: 1.2em;
+  margin-top: 0.3rem;
+  color: #c0392b;
+  font-size: 1rem;
+}
+
+.form-status {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  min-height: 1.2em;
+}
+
+.form-status.error {
+  color: #c0392b;
+}
+
+.form-status.success {
+  color: #27713a;
+}
+
+.btn-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+@media (min-width: 768px) {
   .navbar {
-    flex-direction: column;
-    gap: 1rem;
-    padding: 1rem 2rem;
+    flex-direction: row;
+    gap: 0;
   }
 
   .nav-links {
-    flex-wrap: wrap;
-    justify-content: center;
-    font-size: 1rem;
+    font-size: 1.3rem;
   }
 
   .hero-title {
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
 
   .hero-subtitle {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
 
   .projects-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .skills-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .contact-container {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 
   .about-cards {
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .education-card {
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .section-heading {
+    font-size: 2rem;
   }
 }

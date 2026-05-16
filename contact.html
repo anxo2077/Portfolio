@@ -4,7 +4,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact - Andres Sanchez</title>
+  <title>Contact | Andres Sanchez</title>
+  <meta name="description"
+    content="Contact Andres Sanchez through the form, email, GitHub, LinkedIn or Discord. Based in Caldwell, Idaho, USA." />
+  <meta name="keywords" content="contact, Andres Sanchez, email, GitHub, LinkedIn, Discord, Caldwell Idaho" />
+  <meta name="author" content="Andres Sanchez" />
+
   <link rel="stylesheet" href="assets/css/style.css" />
   <link rel="icon" type="image/x-icon"
     href="https://raw.githubusercontent.com/anxo2077/Portfolio/refs/heads/main/assets/img/favicon.png" />
@@ -34,29 +39,33 @@
       <div class="contact-container">
         <div class="contact-form-wrapper">
           <h2>Send a Message</h2>
-          <p>fill the form and i will respond you asap</p>
+          <p>Fill the form and I will respond to you asap</p>
           <form class="contact-form" action="https://formspree.io/f/xjknlwjv" method="POST">
             <input type="hidden" name="_subject" value="New message from Portfolio" />
 
             <div class="form-group">
               <label for="name">Name</label>
               <input type="text" id="name" name="name" required />
+              <span class="form-error" id="name-error"></span>
             </div>
             <div class="form-group">
               <label for="email">Email</label>
               <input type="email" id="email" name="email" required />
+              <span class="form-error" id="email-error"></span>
             </div>
             <div class="form-group">
               <label for="message">Message</label>
               <textarea id="message" name="message" required></textarea>
+              <span class="form-error" id="message-error"></span>
             </div>
             <button type="submit" class="btn-submit">Send Message</button>
+            <p class="form-status" id="form-status"></p>
           </form>
         </div>
 
         <div class="contact-info-wrapper">
           <h2>Send a Message</h2>
-          <p>fill the form and i will respond you asap</p>
+          <p>Fill the form and I will respond to you asap</p>
           <div class="contact-links">
             <a class="contact-link" href="mailto:ancosan2003@gmail.com">
               <img class="contact-icon"
@@ -87,7 +96,7 @@
           </div>
           <div class="location-box">
             <h3>Location</h3>
-            <p>Calwell, Idaho, USA</p>
+            <p>Caldwell, Idaho, USA</p>
           </div>
         </div>
       </div>
