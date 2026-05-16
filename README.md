@@ -13,6 +13,15 @@ Personal portfolio website showcasing my projects and skills as a junior develop
 - JavaScript
 - Formspree
 
+## Features
+
+- Mobile-first responsive design
+- Contact form with JavaScript validation
+- SEO meta tags (description, keywords, author)
+- About, Skills (with education), Projects and Contact sections
+- Certifications area (coming soon)
+- 404 page
+
 ## Contact
 
 - GitHub: [@anxo2077](https://github.com/anxo2077)
